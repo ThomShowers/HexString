@@ -60,6 +60,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="CharacterClasses.cs" />
+    <Compile Include="HexString_Bytes_Constructor_Tests.cs" />
     <Compile Include="HexString_String_Constructor_Tests.cs" />
     <Compile Include="HexString_GetString_Tests.cs" />
     <Compile Include="HexString_HexadecimalCharactertToByte_Tests.cs" />
