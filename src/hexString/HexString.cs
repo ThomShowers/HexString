@@ -30,5 +30,18 @@ namespace hexString {
             _bytes = GetBytes(hexadecimalString);
             _hexadecimalString = hexadecimalString;
         }
+
+        /// <summary>
+        /// Initializes a new <see cref="HexString"/> from a <see cref="byte"/>[]. 
+        /// </summary>
+        /// <param name="bytes">The bytes.</param>
+        /// <exception cref="ArgumentNullException">
+        /// <paramref name="bytes"/> is <c>null</c>.
+        /// </exception>
+        public HexString(byte[] bytes) {
+            if (bytes == null) { throw new ArgumentNullException("bytes"); }
+            _hexadecimalString = GetString(bytes);
+            _bytes = bytes;
+        }
     }
 }
