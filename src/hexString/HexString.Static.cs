@@ -5,7 +5,7 @@ namespace hexString {
     public partial class HexString {
 
         private static readonly char[] HEXADECIMAL_CHARACTERS =
-            "0123456789ABCDEFabcdef".ToCharArray();
+            "0123456789abcdefABCDEF".ToCharArray();
 
         /// <summary>
         /// Determines whether a character is a hexadecimal character. 
@@ -28,7 +28,7 @@ namespace hexString {
         /// <paramref name="character"/> is not a hexadecimal character.
         /// </exception>
         public static byte HexadecimalCharacterToByte(char character) {
-            var index = Array.IndexOf(HEXADECIMAL_CHARACTERS, char.ToUpper(character));
+            var index = Array.IndexOf(HEXADECIMAL_CHARACTERS, char.ToLower(character));
             if (index == -1) {
                 throw new ArgumentException("Must be a valid hexadecimal character.", "character");
             }

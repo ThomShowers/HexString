@@ -10,14 +10,21 @@ namespace hexString.Tests {
             var expectedString = "000102030405060708090a0b0c0d0e0f";
             var hexString = 
                 new HexString(new byte[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 });
-            Assert.AreEqual(expectedString, hexString.ToString(), true);
+            Assert.AreEqual(expectedString, hexString.ToString());
         }
 
         [TestMethod]
         public void Returns_Correct_String_After_String_Constructor() {
             var expectedString = "000102030405060708090a0b0c0d0e0f";
             var hexString = new HexString(expectedString);
-            Assert.AreEqual(expectedString, hexString.ToString(), true);
+            Assert.AreEqual(expectedString, hexString.ToString());
+        }
+
+        [TestMethod]
+        public void Returns_Lowercase_String_When_Initialized_With_Uppercase_Characters() {
+            var expectedString = "000102030405060708090a0b0c0d0e0f";
+            var hexString = new HexString(expectedString.ToUpper());
+            Assert.AreEqual(expectedString, hexString.ToString());
         }
     }
 }
