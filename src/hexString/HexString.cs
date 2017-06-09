@@ -41,5 +41,13 @@ namespace hexString {
             _hexadecimalString = GetString(bytes);
             _bytes = bytes;
         }
+
+        /// <summary>
+        /// Gets the hexadecimal string representation.
+        /// </summary>
+        /// <returns>The hexadecimal string.</returns>
+        public override string ToString() {
+            return _hexadecimalString;
+        }
     }
 }
