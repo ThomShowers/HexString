@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace hexString.Tests {
+
+    /// <summary>
+    /// Enumerates various collections of <see cref="char"/> type values.
+    /// </summary>
     internal static class CharacterClasses {
 
         /// <summary>
