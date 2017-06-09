@@ -39,7 +39,7 @@ namespace hexString {
         public HexString(byte[] bytes) {
             if (bytes == null) { throw new ArgumentNullException("bytes"); }
             _hexadecimalString = GetString(bytes);
-            _bytes = bytes;
+            _bytes = bytes.Clone() as byte[];
         }
 
         /// <summary>
