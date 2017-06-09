@@ -26,7 +26,7 @@ namespace hexString {
                 throw new ArgumentNullException("hexadecimalString");
             }
             _bytes = GetBytes(hexadecimalString);
-            _hexadecimalString = hexadecimalString;
+            _hexadecimalString = hexadecimalString.ToLower();
         }
 
         /// <summary>
