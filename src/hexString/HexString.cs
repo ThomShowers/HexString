@@ -57,5 +57,29 @@ namespace hexString {
         public override string ToString() {
             return _hexadecimalString;
         }
+
+        /// <summary>
+        /// Casts a <see cref="HexString"/> as a <see cref="string"/>.  
+        /// </summary>
+        /// <param name="hexString">The <see cref="HexString"/>.</param>
+        public static implicit operator string(HexString hexString) {
+            return hexString.ToString();
+        }
+
+        /// <summary>
+        /// Casts a <see cref="HexString"/> as a <see cref="byte"/>[].  
+        /// </summary>
+        /// <param name="hexString">The <see cref="HexString"/>.</param>
+        public static implicit operator byte[](HexString hexString) {
+            return hexString.ToBytes();
+        }
+
+        /// <summary>
+        /// Casts a <see cref="byte"/>[] as a <see cref="HexString"/>.
+        /// </summary>
+        /// <param name="bytes">The <see cref="byte"/>[].</param>
+        public static implicit operator HexString(byte[] bytes) {
+            return new HexString(bytes);
+        }
     }
 }
