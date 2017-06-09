@@ -43,6 +43,14 @@ namespace hexString {
         }
 
         /// <summary>
+        /// Gets the bytes represented by the <see cref="HexString"/>. 
+        /// </summary>
+        /// <returns>A <see cref="byte"/>[].</returns>
+        public byte[] ToBytes() {
+            return _bytes.Clone() as byte[];
+        }
+
+        /// <summary>
         /// Gets the hexadecimal string representation.
         /// </summary>
         /// <returns>The hexadecimal string.</returns>

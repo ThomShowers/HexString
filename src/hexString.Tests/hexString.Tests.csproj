@@ -67,6 +67,7 @@
     <Compile Include="HexString_GetBytes_Tests.cs" />
     <Compile Include="HexString_IsHexadecimalCharacter_Tests.cs" />
     <Compile Include="HexString_IsValidHexString_Tests.cs" />
+    <Compile Include="HexString_ToBytes_Tests.cs" />
     <Compile Include="HexString_ToString_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
